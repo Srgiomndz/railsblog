@@ -1,22 +1,39 @@
-<h1><%= @article.title %></h1>
+<h1 class='bg-yellow-300 mt-16 text-7xl text-center'><%= @article.title %></h1>
 
-<p><%= @article.body %></p>
+<p class=" my-56 text-center"><%= @article.body %></p>
 
 
-<ul>
-  <li><%= link_to "Edit", edit_article_path(@article) %></li>
-  <li><%= link_to "Destroy", article_path(@article), data: {
-    turbo_method: :delete,
+
+<div class="flex justify-between mx-auto max-w-7xl px-5">
+  <button class="my-10 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+    <%= link_to "Edit", edit_article_path(@article) %>
+  </button>
+
+  <button class="my-10 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+<%= link_to "Destroy", article_path(@article), data: {
+  turbo_method: :delete,
     turbo_confirm: "Are you sure?"
-  } %></li>
+  } %>
 
-</ul>
-
-
-<h2>Comments</h2>
-<%= render @article.comments  %>
+  </button>
+</div>
 
 
 
-<h2>Add a comment:</h2>
+<div class="">
+<h2 class="text-3xl text-center">Add a comment:</h2>
 <%= render 'comments/form' %>
+
+<div class="flex-col gap-6">
+  <h2 class="mt-24 text-center text-3xl text-blue-300">Comments:</h2>
+  <% if @article.comments.any? %>
+    <%= render @article.comments %>
+  <% else %>
+    <p class="text-center">No comments yet.</p>
+  <% end %>
+</div>
+
+</div>
+
+
+

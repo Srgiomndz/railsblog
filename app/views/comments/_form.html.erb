@@ -1,19 +1,19 @@
-<%= form_with model: [ @article, @article.comments.build ] do |form| %>
-  <p>
-    <%= form.label :commenter %><br>
-    <%= form.text_field :commenter %>
-  </p>
-  <p>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %>
-  </p>
-
-<p>
-  <%= form.label :status %><br>
-  <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
-</p>
-
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
+<div class="flex justify-center">
+  <%= form_with model: [@article, @article.comments.build] do |form| %>
+    <div class="mb-4">
+      <%= form.label :commenter, class: "block font-bold mb-2" %>
+      <%= form.text_field :commenter, class: "form-input" %>
+    </div>
+    <div class="mb-4">
+      <%= form.label :body, class: "block font-bold mb-2" %>
+      <%= form.text_area :body, class: "form-textarea" %>
+    </div>
+    <div class="mb-4">
+      <%= form.label :status, class: "block font-bold mb-2" %>
+      <%= form.select :status, ['public', 'private', 'archived'], { selected: 'public' }, class: "form-select" %>
+    </div>
+    <div>
+      <%= form.submit "Submit", class: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" %>
+    </div>
+  <% end %>
+</div>

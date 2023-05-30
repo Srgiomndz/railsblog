@@ -1,26 +1,28 @@
-<%= form_with model: article do |form| %>
-  <div>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
-    <% article.errors.full_messages_for(:title).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
+<div class="flex justify-center mt-20">
+  <%= form_with model: article do |form| %>
+    <div class="my-10">
+      <span class="text-2xl"><%= form.label :title %><br></span>
+      <%= form.text_field :title, class: "form-input block w-full" %>
+      <% article.errors.full_messages_for(:title).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
 
-  <div>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %><br>
-    <% article.errors.full_messages_for(:body).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
+    <div class="my-10">
+      <span class="text-2xl"><%= form.label :body %><br></span>
+      <%= form.text_area :body, class: "form-textarea block w-full" %><br>
+      <% article.errors.full_messages_for(:body).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
 
-  <div>
-  <%= form.label :status %><br>
-  <%= form.select :status, ['public', 'private', 'archived'], selected: 'public' %>
+    <div class="my-10">
+      <span class="text-2xl"><%= form.label :status %><br></span>
+      <%= form.select :status, ['public', 'private', 'archived'], selected: 'public', class: "form-select block w-full" %>
+    </div>
+
+    <button class="my-10 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">
+      <%= form.submit %>
+    </button>
+  <% end %>
 </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
