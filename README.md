@@ -1,24 +1,36 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
 
-* System dependencies
+  </a>
 
-* Configuration
+  <h3 align="center">Rails Blog</h3>
 
-* Database creation
+  <p align="center">
+   
+   
 
-* Database initialization
+  </p>
+</div>
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
 
-* ...
+
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+
+
+Blog site created with Ruby on Rails and Tailwindcss.
+
+This was my first foray into RoR, previously I have only worked with JS, React. I really enjoyed the opinionated aspect of RoR and will be using it in future products.
+
+
+
