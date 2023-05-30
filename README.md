@@ -30,7 +30,7 @@
 
 Blog site created with Ruby on Rails and Tailwindcss.
 
-This was my first foray into RoR, previously I have only worked with JS, React. I really enjoyed the opinionated aspect of RoR and will be using it in future products.
+This was my first introduction to RoR, previously I have only worked with JS, React. I really enjoyed the opinionated aspect of RoR and will be using it in future products.
 
 
 
